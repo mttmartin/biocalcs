@@ -1,0 +1,23 @@
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+Enter your sequence below and select a calculation to perform. Results provided in plaintext for easy copying.
+
+<br>
+
+<form action="show_results" method="get">
+
+    {% csrf_token %}
+{% bootstrap_form form  %}
+	<br>
+	<br>
+	{% buttons %}
+		{% bootstrap_button "Reverse Complement" button_type="submit" button_class="btn-primary" name="reverse_complement" %}
+		{% bootstrap_button "Complement" button_type="submit" button_class="btn-primary" name="complement" %}
+		{% bootstrap_button "Melting Temperature" button_type="submit" button_class="btn-primary" name="melting_temp" %}
+		{% bootstrap_button "GC Content" button_type="submit" button_class="btn-primary" name="gc_content" %}
+	{% endbuttons %}
+</form>
