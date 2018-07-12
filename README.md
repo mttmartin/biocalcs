@@ -6,6 +6,6 @@ Biocalcs is a clean, simple website capable of carrying out basic calculations i
 ## Dependencies
 
 Biocalcs is built on Django with the following dependencies:
-* boostrap3
+* django-bootstrap3
 * biopython
 
